@@ -20,6 +20,9 @@ use App\Http\Controllers\QuestionController;
     return $request->user();
 }); */
 
+//0=> PostData
+Route::post('/question/add',[QuestionController::class,'store']);
+
 // Public Routes
 Route::get('/students', [StudentController::class, 'index']);
 Route::get('/questions', [QuestionController::class, 'index']);
